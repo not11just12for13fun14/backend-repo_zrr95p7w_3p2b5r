@@ -1,35 +1,35 @@
 INFO:     Will watch for changes in these directories: ['/home/workspace']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [152] using StatReload
-INFO:     Started server process [154]
+INFO:     Started reloader process [210] using StatReload
+INFO:     Started server process [212]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     172.20.0.1:38592 - "HEAD / HTTP/1.1" 405 Method Not Allowed
-INFO:     172.20.0.1:38578 - "GET /doctors HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38612 - "GET /families HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38612 - "GET /articles HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38612 - "GET /doctors HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38630 - "GET /families HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38628 - "GET /admins HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38578 - "GET /emergencies HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38612 - "GET /articles HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38628 - "GET /admins HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38604 - "GET /patients HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38630 - "GET /emergencies HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38628 - "GET /patients HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38566 - "GET /dashboard/summary?patient_id=demo-001 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:38630 - "GET /dashboard/summary?patient_id=demo-001 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45642 - "GET /doctors HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45654 - "GET /patients HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45658 - "GET /families HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45666 - "GET /admins HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45630 - "GET /dashboard/summary?patient_id=demo-001 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45642 - "GET /articles HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45654 - "GET /doctors HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45630 - "GET /patients HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45642 - "GET /admins HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45654 - "GET /articles HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45666 - "GET /dashboard/summary?patient_id=demo-001 HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45672 - "GET /emergencies HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45654 - "GET /families HTTP/1.1" 200 OK
-INFO:     172.20.0.1:45658 - "GET /emergencies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48644 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:48652 - "GET /admins HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48664 - "GET /emergencies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48688 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48674 - "GET /articles HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48652 - "GET /families HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48688 - "GET /admins HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48674 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48652 - "GET /articles HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48688 - "GET /families HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48690 - "GET /patients HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48668 - "GET /dashboard/summary?patient_id=demo-001 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48688 - "GET /patients HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48690 - "GET /dashboard/summary?patient_id=demo-001 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48668 - "GET /emergencies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48664 - "GET /families HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48668 - "GET /dashboard/summary?patient_id=demo-001 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48664 - "GET /articles HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48688 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48668 - "GET /families HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48664 - "GET /dashboard/summary?patient_id=demo-001 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48668 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48688 - "GET /articles HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48674 - "GET /admins HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48652 - "GET /emergencies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48688 - "GET /admins HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48664 - "GET /emergencies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48690 - "GET /patients HTTP/1.1" 200 OK
+INFO:     172.20.0.1:48664 - "GET /patients HTTP/1.1" 200 OK
