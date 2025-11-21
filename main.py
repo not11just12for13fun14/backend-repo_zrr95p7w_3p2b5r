@@ -62,6 +62,80 @@ class NearbyRequest(BaseModel):
     lng: float
     radius_km: float = 10
 
+# -------------------------- Startup Seed --------------------------
+@app.on_event("startup")
+def seed_default_content():
+    try:
+        if db is None:
+            return
+        # Seed Emergency contacts
+        if db["emergency"].count_documents({}) == 0:
+            emergencies = [
+                {"area": "Ambulance", "number": "108", "description": "India - Medical emergency ambulance"},
+                {"area": "Police", "number": "100", "description": "India - Police control room"},
+                {"area": "Fire & Rescue", "number": "101", "description": "India - Fire brigade"},
+                {"area": "National Ambulance", "number": "911", "description": "US/Canada - Medical, Police, Fire"},
+                {"area": "Poison Control", "number": "1-800-222-1222", "description": "US - Poison help line"},
+            ]
+            for e in emergencies:
+                try:
+                    create_document("emergency", Emergency(**e))
+                except Exception:
+                    pass
+        # Seed Articles
+        if db["article"].count_documents({}) == 0:
+            articles = [
+                {
+                    "title": "Understanding Blood Pressure: Basics & Targets",
+                    "slug": "blood-pressure-basics",
+                    "excerpt": "What your systolic/diastolic numbers mean and simple ways to keep them in range.",
+                    "body": (
+                        "Blood pressure is recorded as two numbers: systolic over diastolic. "
+                        "For most adults, a normal target is below 120/80 mmHg. To support healthy BP, "
+                        "prioritize regular activity, a low-sodium diet, quality sleep, stress management, and follow-up with your clinician."
+                    ),
+                    "tags": ["heart", "vitals", "lifestyle"],
+                },
+                {
+                    "title": "Hydration 101: How Much Water Do You Need?",
+                    "slug": "hydration-101",
+                    "excerpt": "Daily water needs vary, but these cues help you stay adequately hydrated.",
+                    "body": (
+                        "Most adults do well aiming for 2–3 liters per day, but needs rise with heat and exercise. "
+                        "Clear or pale-yellow urine is a simple indicator of good hydration. Spread intake across the day, and pair with electrolytes when sweating heavily."
+                    ),
+                    "tags": ["hydration", "wellness"],
+                },
+                {
+                    "title": "Managing Type 2 Diabetes: First Steps",
+                    "slug": "type-2-diabetes-first-steps",
+                    "excerpt": "Foundational habits that improve glucose and energy levels.",
+                    "body": (
+                        "Consistent meals rich in protein and fiber, daily walks, and 7–9 hours of sleep can meaningfully improve glucose control. "
+                        "Work with your care team to monitor A1C, review medications, and set realistic weekly goals."
+                    ),
+                    "tags": ["diabetes", "nutrition", "exercise"],
+                },
+                {
+                    "title": "Building Heart-Healthy Habits",
+                    "slug": "heart-healthy-habits",
+                    "excerpt": "Small changes compound: movement, nutrition, and stress control.",
+                    "body": (
+                        "Aim for 150 minutes of moderate activity weekly, include colorful plants and omega‑3s, limit ultra-processed foods, and try brief daily mindfulness. "
+                        "Regular checkups help track cholesterol, blood pressure, and overall cardiovascular risk."
+                    ),
+                    "tags": ["cardio", "prevention"],
+                },
+            ]
+            for a in articles:
+                try:
+                    create_document("article", Article(**a))
+                except Exception:
+                    pass
+    except Exception:
+        # Avoid blocking startup if seeding fails
+        pass
+
 # -------------------------- CRUD Endpoints --------------------------
 # Generic creators using database helpers; validation enforced by schemas
 
